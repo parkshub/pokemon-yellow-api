@@ -15,9 +15,9 @@ if (!localStorage.getItem('fullList')){
   fetch ('https://pokeapi.co/api/v2/pokedex/2/')
     .then(res => res.json())
     .then(data => {
-      log(data.pokemon_entries[0].pokemon_species.name)
+      // log(data.pokemon_entries[0].pokemon_species.name)
       let tempList = data.pokemon_entries.map(x=> x.pokemon_species.name)
-      log(tempList)
+      // log(tempList)
       localStorage.setItem('fullList', tempList)
   })
 }
@@ -75,7 +75,7 @@ function getFetch(){
     fetch('https://pokeapi.co/api/v2/pokemon/' + choice)
       .then (res => res.json())
       .then (data => {
-        log(data)
+        // log(data)
         // height
         height = (Number(data.height) * 0.1) + ' m'
         // weight
